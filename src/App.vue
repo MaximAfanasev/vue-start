@@ -204,10 +204,20 @@ import TheWelcome from './components/TheWelcome.vue'
       </template>
     </li>
   </ul>
+
+  <User name="john" surn="smit" :arg="[1, 2, 3]" :arg2="{a: 1, b: 2, c: 3}" :arg3="true"/>
+  <User v-for="user in users"
+        :name="user.name"
+        :surn="user.surn"
+        :key="user.id"></User>
 </template>
 
 <script>
+import User from './components/User.vue'
 export default {
+  components: {
+    User
+  },
   data() {
     return {
       text1: '111',
@@ -315,7 +325,24 @@ export default {
           surn: 'surn3',
           isEdit: false,
         },
-      ]
+      ],
+      users5: [
+        {
+          id: 1,
+          name: 'name1',
+          surn: 'surn1'
+        },
+        {
+          id: 2,
+          name: 'name2',
+          surn: 'surn2'
+        },
+        {
+          id: 3,
+          name: 'name3',
+          surn: 'surn3'
+        },
+      ],
     }
   },
   methods: {
