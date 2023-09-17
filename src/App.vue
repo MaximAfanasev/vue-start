@@ -8,27 +8,39 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ text2 }}</p>
   <p>{{ name }}</p>
   <p>{{ surn }}</p>
+
   <img :src="attr">
   <a :href="href">page</a>
+
   {{ var1 + var2 }}
   {{ num }}
   {{ arr[0] }}
   {{ obj.a }}
+
   <button @click="show">alert !</button>
   <button @click="show2">alert page</button>
   <button @click="show3">alert UpperCase 1 letter</button>
   <button @click="show4('text1')">show text in btn</button>
+
   {{ text3 }}
+
   <button @click="change">text</button>
+
   <p>{{ name }}</p>
   <p>{{ surn }}</p>
   <p>{{ full }}</p>
+
   <button @click="hide">hide</button>
   <button @click="toggle">{{ visible ? 'hide' : 'show' }}</button>
   <p v-if="visible">visible</p>
   <p v-if="!visible">!visible</p>
+
   <p v-if="isAuth">+++</p>
   <p v-else>---</p>
+
+  <p v-if="num2 === 1 || num2 === 3">
+    one or two
+  </p>
 </template>
 
 <script>
@@ -49,7 +61,8 @@ export default {
       obj: {a: 1, b: 2, c: 3},
       text3: 'xxx',
       visible: true,
-      isAuth: true, // тут или true, или false
+      isAuth: true, // тут или true, или false,
+      num2: 3, // пусть сейчас там 3
     }
   },
   methods: {
