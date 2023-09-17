@@ -20,6 +20,9 @@ import TheWelcome from './components/TheWelcome.vue'
   <button @click="show4('text1')">show text in btn</button>
   {{ text3 }}
   <button @click="change">text</button>
+  <p>{{ name }}</p>
+  <p>{{ surn }}</p>
+  <p>{{ full }}</p>
 </template>
 
 <script>
@@ -60,6 +63,11 @@ export default {
     },
     change: function() {
       this.text3 = 'yyy';
+    }
+  },
+  computed: {
+    full: function() {
+      return this.name + ' ' + this.surn;
     }
   }
 }
