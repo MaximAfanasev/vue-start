@@ -105,6 +105,8 @@ import TheWelcome from './components/TheWelcome.vue'
   <button @click="add">add</button>
 
   <p :class="str">text</p>s
+
+  <p :class="obj2">text</p>
 </template>
 
 <script>
@@ -160,6 +162,10 @@ export default {
         },
       ],
       str: 'active valid',
+      obj2: {
+        active: true,
+        valid:  false,
+      },
     }
   },
   methods: {
