@@ -12,6 +12,9 @@ import TheWelcome from './components/TheWelcome.vue'
   <a :href="href">page</a>
   {{ var1 + var2 }}
   {{ num }}
+  {{ arr[0] }}
+  {{ arr[1] }}
+  {{ arr[2] }}
 </template>
 
 <script>
@@ -28,6 +31,7 @@ export default {
       var1: 1,
       var2: 2,
       num: 5,
+      arr: [1, 2, 3],
     }
   }
 }
