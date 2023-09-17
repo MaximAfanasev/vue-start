@@ -128,6 +128,11 @@ import TheWelcome from './components/TheWelcome.vue'
   <p :style="{color: 'red', fontSize: '30px'}">
     text
   </p>
+
+  <template>
+    <input v-model="message">
+    <p>{{ message }}</p>
+  </template>
 </template>
 
 <script>
@@ -192,6 +197,7 @@ export default {
       },
       isActive: true,
       hasError: true,
+      message: 'hello',
     }
   },
   methods: {
