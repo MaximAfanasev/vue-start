@@ -65,6 +65,12 @@ import TheWelcome from './components/TheWelcome.vue'
   <p v-for="(elem, key) in arr">
     {{ key + 1 }} {{ elem }}
   </p>
+
+  <p v-for="(elem, key, index) in obj">
+    {{ index }}
+    {{ key }}
+    {{ elem }}
+  </p>
 </template>
 
 <script>
