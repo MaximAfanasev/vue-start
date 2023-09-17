@@ -121,6 +121,13 @@ import TheWelcome from './components/TheWelcome.vue'
   <p :class="{active: isActive, error: hasError}">
     text
   </p>
+
+  <p :style="{color: 'red', border: '1px solid green'}">
+    text
+  </p>
+  <p :style="{color: 'red', fontSize: '30px'}">
+    text
+  </p>
 </template>
 
 <script>
