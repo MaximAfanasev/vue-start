@@ -24,6 +24,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ surn }}</p>
   <p>{{ full }}</p>
   <button @click="hide">hide</button>
+  <button @click="toggle">toggle</button>
   <p v-if="visible">visible</p>
   <p v-if="!visible">!visible</p>
 </template>
@@ -70,6 +71,9 @@ export default {
     },
     hide: function() {
       this.visible = false;
+    },
+    toggle: function() {
+      this.visible = !this.visible;
     }
   },
   computed: {
