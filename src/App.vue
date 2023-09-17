@@ -165,6 +165,8 @@ import TheWelcome from './components/TheWelcome.vue'
     <option v-for="option in options">{{ option }}</option>
   </select>
   <p>{{ selected2 }}</p>
+
+  <button v-bind:disabled="isDisabled">btn</button>
 </template>
 
 <script>
@@ -237,6 +239,7 @@ export default {
       selected: 'value1', // значение по умолчанию
       selected2: 'value1', // значение по умолчанию
       options: ['value1', 'value2', 'value3'],
+      isDisabled: true,
     }
   },
   methods: {
