@@ -152,6 +152,19 @@ import TheWelcome from './components/TheWelcome.vue'
   <input name="radio" type="radio" v-model="choice" value="v2">2
   <input name="radio" type="radio" v-model="choice" value="v3">3
   you choosed: {{ choice }}
+
+  <select v-model="selected">
+    <option>value1</option>
+    <option>value2</option>
+    <option>value3</option>
+  </select>
+
+  <p>{{ selected }}</p>
+
+  <select v-model="selected2">
+    <option v-for="option in options">{{ option }}</option>
+  </select>
+  <p>{{ selected2 }}</p>
 </template>
 
 <script>
@@ -221,6 +234,9 @@ export default {
       res3: 0,
       checked: true,
       choice: '',
+      selected: 'value1', // значение по умолчанию
+      selected2: 'value1', // значение по умолчанию
+      options: ['value1', 'value2', 'value3'],
     }
   },
   methods: {
