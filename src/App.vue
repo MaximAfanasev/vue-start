@@ -24,6 +24,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ surn }}</p>
   <p>{{ full }}</p>
   <p v-if="visible">visible</p>
+  <p v-if="!visible">!visible</p>
 </template>
 
 <script>
