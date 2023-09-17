@@ -25,8 +25,8 @@ export default {
   },
   methods: {
     handle() {
-      this.$emit('show');
-    }
+      this.$emit('show', 'xxx', 'yyy');
+    },
   }
 }
 </script>

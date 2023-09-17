@@ -212,6 +212,10 @@ import TheWelcome from './components/TheWelcome.vue'
         :key="user.id"></User>
 
   <User @show="func" />
+
+  <button @click="$emit('show', 'xxx', 'yyy')">
+    btn
+  </button>
 </template>
 
 <script>
@@ -346,9 +350,6 @@ export default {
           surn: 'surn3'
         },
       ],
-      func() {
-        alert('xxx');
-      }
     }
   },
   methods: {
@@ -403,6 +404,12 @@ export default {
     save(user) {
       user.isEdit = false;
     },
+    func() {
+      alert('xxx');
+    },
+    func2(arg1, arg2) {
+      console.log(arg1, arg2);
+    }
   },
   computed: {
     full: function() {
