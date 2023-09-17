@@ -14,6 +14,7 @@ import TheWelcome from './components/TheWelcome.vue'
   {{ num }}
   {{ arr[0] }}
   {{ obj.a }}
+  {{ show() }}
 </template>
 
 <script>
@@ -32,6 +33,11 @@ export default {
       num: 5,
       arr: [1, 2, 3],
       obj: {a: 1, b: 2, c: 3},
+    }
+  },
+  methods: {
+    show: function() {
+      alert('!');
     }
   }
 }
