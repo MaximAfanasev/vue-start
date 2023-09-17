@@ -1,6 +1,8 @@
 <template>
   {{ name }}
   {{ surn }}
+
+  <button @click="handle">btn</button>
 </template>
 
 <script>
@@ -19,6 +21,11 @@ export default {
   data() {
     return {
       name: 'john',
+    }
+  },
+  methods: {
+    handle() {
+      this.$emit('show');
     }
   }
 }

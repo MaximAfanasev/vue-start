@@ -210,6 +210,8 @@ import TheWelcome from './components/TheWelcome.vue'
         :name="user.name"
         :surn="user.surn"
         :key="user.id"></User>
+
+  <User @show="func" />
 </template>
 
 <script>
@@ -218,6 +220,7 @@ export default {
   components: {
     User
   },
+  emits: ['show'],
   data() {
     return {
       text1: '111',
@@ -343,6 +346,9 @@ export default {
           surn: 'surn3'
         },
       ],
+      func() {
+        alert('xxx');
+      }
     }
   },
   methods: {
