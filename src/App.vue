@@ -27,6 +27,8 @@ import TheWelcome from './components/TheWelcome.vue'
   <button @click="toggle">{{ visible ? 'hide' : 'show' }}</button>
   <p v-if="visible">visible</p>
   <p v-if="!visible">!visible</p>
+  <p v-if="isAuth">+++</p>
+  <p v-else>---</p>
 </template>
 
 <script>
@@ -47,6 +49,7 @@ export default {
       obj: {a: 1, b: 2, c: 3},
       text3: 'xxx',
       visible: true,
+      isAuth: true, // тут или true, или false
     }
   },
   methods: {
