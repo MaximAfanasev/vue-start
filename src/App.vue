@@ -10,6 +10,8 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ surn }}</p>
   <img :src="attr">
   <a :href="href">page</a>
+  {{ var1 + var2 }}
+  {{ num }}
 </template>
 
 <script>
@@ -23,6 +25,9 @@ export default {
       attr: 'img.png',
       text: 'page',
       href: 'page.html',
+      var1: 1,
+      var2: 2,
+      num: 5,
     }
   }
 }
