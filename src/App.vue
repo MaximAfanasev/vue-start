@@ -15,6 +15,7 @@ import TheWelcome from './components/TheWelcome.vue'
   {{ arr[0] }}
   {{ obj.a }}
   <button @click="show">alert !</button>
+  <button @click="show2">alert page</button>
 </template>
 
 <script>
@@ -38,6 +39,9 @@ export default {
   methods: {
     show: function() {
       alert('!');
+    },
+    show2: function() {
+      alert(this.text);
     }
   }
 }
