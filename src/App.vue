@@ -103,6 +103,8 @@ import TheWelcome from './components/TheWelcome.vue'
     {{ elem }}
   </p>
   <button @click="add">add</button>
+
+  <p :class="str">text</p>s
 </template>
 
 <script>
@@ -156,7 +158,8 @@ export default {
           name: 'name3',
           surn: 'surn3',
         },
-      ]
+      ],
+      str: 'active valid',
     }
   },
   methods: {
