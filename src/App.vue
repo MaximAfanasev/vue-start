@@ -133,6 +133,10 @@ import TheWelcome from './components/TheWelcome.vue'
     <input v-model="message">
     <p>{{ message }}</p>
   </template>
+
+  <p>{{ res3 }}</p>
+  <input v-model="num3">
+  <button v-on:click="calc">work</button>
 </template>
 
 <script>
@@ -198,6 +202,8 @@ export default {
       isActive: true,
       hasError: true,
       message: 'hello',
+      num3: 0,
+      res3: 0
     }
   },
   methods: {
@@ -231,6 +237,9 @@ export default {
     },
     setDone: function() {
       this.styles.done = true;
+    },
+    calc: function() {
+      this.res3 = this.num3 ** 2;
     }
   },
   computed: {
