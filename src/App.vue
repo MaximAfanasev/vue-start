@@ -147,6 +147,11 @@ import TheWelcome from './components/TheWelcome.vue'
   <input type="checkbox" v-model="arr" value="v1">
   <input type="checkbox" v-model="arr" value="v2">
   <input type="checkbox" v-model="arr" value="v3">
+
+  <input name="radio" type="radio" v-model="choice" value="v1">1
+  <input name="radio" type="radio" v-model="choice" value="v2">2
+  <input name="radio" type="radio" v-model="choice" value="v3">3
+  you choosed: {{ choice }}
 </template>
 
 <script>
@@ -215,6 +220,7 @@ export default {
       num3: 0,
       res3: 0,
       checked: true,
+      choice: '',
     }
   },
   methods: {
