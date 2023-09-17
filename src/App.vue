@@ -137,6 +137,12 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ res3 }}</p>
   <input v-model="num3">
   <button v-on:click="calc">work</button>
+
+  <textarea v-model="text"></textarea>
+  <p>{{ text }}</p>
+
+  <input type="checkbox" v-model="checked">
+  <p>{{ checked ? 'yes' : 'no' }}</p>
 </template>
 
 <script>
@@ -203,7 +209,8 @@ export default {
       hasError: true,
       message: 'hello',
       num3: 0,
-      res3: 0
+      res3: 0,
+      checked: true,
     }
   },
   methods: {
