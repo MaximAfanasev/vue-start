@@ -71,6 +71,11 @@ import TheWelcome from './components/TheWelcome.vue'
     {{ key }}
     {{ elem }}
   </p>
+
+  <template v-for="elem in arr">
+    <p>{{ elem }}</p>
+    <hr>
+  </template>
 </template>
 
 <script>
