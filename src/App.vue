@@ -117,6 +117,10 @@ import TheWelcome from './components/TheWelcome.vue'
   <p :class="{active: true, 'has-error': false}">
     text
   </p>
+
+  <p :class="{active: isActive, error: hasError}">
+    text
+  </p>
 </template>
 
 <script>
@@ -179,6 +183,8 @@ export default {
       styles: {
         done: false,
       },
+      isActive: true,
+      hasError: true,
     }
   },
   methods: {
