@@ -4,14 +4,22 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <div>
-    Hello World
-  </div>
+  <p>{{ text1 }}</p>
+  <p>{{ text2 }}</p>
+  <p>{{ name }}</p>
+  <p>{{ surn }}</p>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  data() {
+    return {
+      text1: '111',
+      text2: '222',
+      name: 'john',
+      surn: 'smit',
+    }
+  }
 }
 </script>
 
