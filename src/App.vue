@@ -52,6 +52,10 @@ import TheWelcome from './components/TheWelcome.vue'
     <p>+++</p>
     <p>+++</p>
   </template>
+
+  <p v-show="isAuth">
+    +++
+  </p>
 </template>
 
 <script>
