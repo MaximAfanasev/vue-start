@@ -18,6 +18,8 @@ import TheWelcome from './components/TheWelcome.vue'
   <button @click="show2">alert page</button>
   <button @click="show3">alert UpperCase 1 letter</button>
   <button @click="show4('text1')">show text in btn</button>
+  {{ text3 }}
+  <button @click="change">text</button>
 </template>
 
 <script>
@@ -36,6 +38,7 @@ export default {
       num: 5,
       arr: [1, 2, 3],
       obj: {a: 1, b: 2, c: 3},
+      text3: 'xxx',
     }
   },
   methods: {
@@ -54,6 +57,9 @@ export default {
     },
     show4: function(str) {
       alert(str);
+    },
+    change: function() {
+      this.text3 = 'yyy';
     }
   }
 }
