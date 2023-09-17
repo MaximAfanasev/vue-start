@@ -23,6 +23,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ name }}</p>
   <p>{{ surn }}</p>
   <p>{{ full }}</p>
+  <button @click="hide">hide</button>
   <p v-if="visible">visible</p>
   <p v-if="!visible">!visible</p>
 </template>
@@ -66,6 +67,9 @@ export default {
     },
     change: function() {
       this.text3 = 'yyy';
+    },
+    hide: function() {
+      this.visible = false;
     }
   },
   computed: {
