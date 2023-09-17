@@ -81,6 +81,10 @@ import TheWelcome from './components/TheWelcome.vue'
     {{ user.name }}
     {{ user.surn }}
   </p>
+
+  <p v-for="num in 10">
+    {{ num }}
+  </p>
 </template>
 
 <script>
