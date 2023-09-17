@@ -24,7 +24,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ surn }}</p>
   <p>{{ full }}</p>
   <button @click="hide">hide</button>
-  <button @click="toggle">toggle</button>
+  <button @click="toggle">{{ visible ? 'hide' : 'show' }}</button>
   <p v-if="visible">visible</p>
   <p v-if="!visible">!visible</p>
 </template>
