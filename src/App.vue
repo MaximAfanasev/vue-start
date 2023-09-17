@@ -56,6 +56,8 @@ import TheWelcome from './components/TheWelcome.vue'
   <p v-show="isAuth">
     +++
   </p>
+
+  <p v-for="elem in arr">{{ elem }}</p>
 </template>
 
 <script>
