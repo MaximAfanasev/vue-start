@@ -41,6 +41,11 @@ import TheWelcome from './components/TheWelcome.vue'
   <p v-if="num2 === 1 || num2 === 3">
     one or two
   </p>
+
+  <p v-if="num == 1">one</p>
+  <p v-else-if="num == 2">two</p>
+  <p v-else-if="num == 3">three</p>
+  <p v-else>error</p>
 </template>
 
 <script>
