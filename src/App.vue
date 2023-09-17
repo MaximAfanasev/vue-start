@@ -98,6 +98,11 @@ import TheWelcome from './components/TheWelcome.vue'
     {{ user.name }}
     {{ user.surn }}
   </p>
+
+  <p v-for="elem in arr2">
+    {{ elem }}
+  </p>
+  <button @click="add">add</button>
 </template>
 
 <script>
@@ -179,6 +184,9 @@ export default {
     },
     toggle: function() {
       this.visible = !this.visible;
+    },
+    add: function() {
+      this.arr2.push('xxx');
     }
   },
   computed: {
