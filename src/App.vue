@@ -85,6 +85,14 @@ import TheWelcome from './components/TheWelcome.vue'
   <p v-for="num in 10">
     {{ num }}
   </p>
+
+  <ul>
+    <template v-for="elem in arr2">
+      <li v-if="elem % 2 === 0">
+        {{ elem }}
+      </li>
+    </template>
+  </ul>
 </template>
 
 <script>
@@ -120,7 +128,8 @@ export default {
           name: 'name3',
           surn: 'surn3',
         },
-      ]
+      ],
+      arr2: [1, 2, 3, 4, 5],
     }
   },
   methods: {
