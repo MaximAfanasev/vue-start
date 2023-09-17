@@ -14,7 +14,7 @@ import TheWelcome from './components/TheWelcome.vue'
   {{ num }}
   {{ arr[0] }}
   {{ obj.a }}
-  {{ show() }}
+  <button @click="show">alert !</button>
 </template>
 
 <script>
