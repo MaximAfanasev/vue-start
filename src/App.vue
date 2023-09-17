@@ -143,6 +143,10 @@ import TheWelcome from './components/TheWelcome.vue'
 
   <input type="checkbox" v-model="checked">
   <p>{{ checked ? 'yes' : 'no' }}</p>
+
+  <input type="checkbox" v-model="arr" value="v1">
+  <input type="checkbox" v-model="arr" value="v2">
+  <input type="checkbox" v-model="arr" value="v3">
 </template>
 
 <script>
