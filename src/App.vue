@@ -8,6 +8,8 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ text2 }}</p>
   <p>{{ name }}</p>
   <p>{{ surn }}</p>
+  <img :src="attr">
+  <a :href="href">page</a>
 </template>
 
 <script>
@@ -18,6 +20,9 @@ export default {
       text2: '222',
       name: 'john',
       surn: 'smit',
+      attr: 'img.png',
+      text: 'page',
+      href: 'page.html',
     }
   }
 }
