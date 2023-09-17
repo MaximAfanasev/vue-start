@@ -46,6 +46,12 @@ import TheWelcome from './components/TheWelcome.vue'
   <p v-else-if="num == 2">two</p>
   <p v-else-if="num == 3">three</p>
   <p v-else>error</p>
+
+  <template v-if="isAuth">
+    <p>+++</p>
+    <p>+++</p>
+    <p>+++</p>
+  </template>
 </template>
 
 <script>
