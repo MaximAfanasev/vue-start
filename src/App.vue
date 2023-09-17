@@ -110,6 +110,13 @@ import TheWelcome from './components/TheWelcome.vue'
 
   <button @click="setDone">hide</button>
   <p :class="styles">text</p>
+
+  <p :class="{active: true, error: false}">
+    text
+  </p>
+  <p :class="{active: true, 'has-error': false}">
+    text
+  </p>
 </template>
 
 <script>
