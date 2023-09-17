@@ -13,8 +13,7 @@ import TheWelcome from './components/TheWelcome.vue'
   {{ var1 + var2 }}
   {{ num }}
   {{ arr[0] }}
-  {{ arr[1] }}
-  {{ arr[2] }}
+  {{ obj.a }}
 </template>
 
 <script>
@@ -32,6 +31,7 @@ export default {
       var2: 2,
       num: 5,
       arr: [1, 2, 3],
+      obj: {a: 1, b: 2, c: 3},
     }
   }
 }
