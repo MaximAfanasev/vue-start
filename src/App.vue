@@ -93,6 +93,11 @@ import TheWelcome from './components/TheWelcome.vue'
       </li>
     </template>
   </ul>
+
+  <p v-for="user in users2" :key="user.id">
+    {{ user.name }}
+    {{ user.surn }}
+  </p>
 </template>
 
 <script>
@@ -130,6 +135,23 @@ export default {
         },
       ],
       arr2: [1, 2, 3, 4, 5],
+      users2: [
+        {
+          id: 1,
+          name: 'name1',
+          surn: 'surn1',
+        },
+        {
+          id: 2,
+          name: 'name2',
+          surn: 'surn2',
+        },
+        {
+          id: 3,
+          name: 'name3',
+          surn: 'surn3',
+        },
+      ]
     }
   },
   methods: {
