@@ -107,6 +107,9 @@ import TheWelcome from './components/TheWelcome.vue'
   <p :class="str">text</p>s
 
   <p :class="obj2">text</p>
+
+  <button @click="setDone">hide</button>
+  <p :class="styles">text</p>
 </template>
 
 <script>
@@ -166,6 +169,9 @@ export default {
         active: true,
         valid:  false,
       },
+      styles: {
+        done: false,
+      },
     }
   },
   methods: {
@@ -196,6 +202,9 @@ export default {
     },
     add: function() {
       this.arr2.push('xxx');
+    },
+    setDone: function() {
+      this.styles.done = true;
     }
   },
   computed: {
@@ -232,5 +241,9 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
+}
+
+p.done {
+  text-decoration: line-through;
 }
 </style>
