@@ -16,6 +16,7 @@ import TheWelcome from './components/TheWelcome.vue'
   {{ obj.a }}
   <button @click="show">alert !</button>
   <button @click="show2">alert page</button>
+  <button @click="show3">alert UpperCase 1 letter</button>
 </template>
 
 <script>
@@ -42,6 +43,13 @@ export default {
     },
     show2: function() {
       alert(this.text);
+    },
+    show3: function() {
+      let text = this.cape(this.text);
+      alert(text);
+    },
+    cape: function(str) {
+      return str[0].toUpperCase() + str.slice(1);
     }
   }
 }
