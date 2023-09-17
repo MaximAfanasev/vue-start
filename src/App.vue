@@ -23,6 +23,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ name }}</p>
   <p>{{ surn }}</p>
   <p>{{ full }}</p>
+  <p v-if="visible">visible</p>
 </template>
 
 <script>
@@ -42,6 +43,7 @@ export default {
       arr: [1, 2, 3],
       obj: {a: 1, b: 2, c: 3},
       text3: 'xxx',
+      visible: true,
     }
   },
   methods: {
