@@ -167,6 +167,16 @@ import TheWelcome from './components/TheWelcome.vue'
   <p>{{ selected2 }}</p>
 
   <button v-bind:disabled="isDisabled">btn</button>
+
+  <input v-model="newItem">
+  <button @click="addItem">add</button>
+
+  <ul>
+    <li v-for="(item, index) in items" :key="index">
+      {{ item }}
+      <button @click="removeItem(index)">remove</button>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -240,6 +250,8 @@ export default {
       selected2: 'value1', // значение по умолчанию
       options: ['value1', 'value2', 'value3'],
       isDisabled: true,
+      newItem: '',
+      items: ['a', 'b', 'c', 'd', 'e'],
     }
   },
   methods: {
@@ -276,6 +288,12 @@ export default {
     },
     calc: function() {
       this.res3 = this.num3 ** 2;
+    },
+    addItem: function() {
+      this.items.push(this.newItem);
+    },
+    removeItem: function(index) {
+      this.items.splice(index, 1);
     }
   },
   computed: {
