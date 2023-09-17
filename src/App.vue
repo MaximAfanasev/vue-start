@@ -76,6 +76,11 @@ import TheWelcome from './components/TheWelcome.vue'
     <p>{{ elem }}</p>
     <hr>
   </template>
+
+  <p v-for="user in users">
+    {{ user.name }}
+    {{ user.surn }}
+  </p>
 </template>
 
 <script>
@@ -98,6 +103,20 @@ export default {
       visible: true,
       isAuth: true, // тут или true, или false,
       num2: 3, // пусть сейчас там 3
+      users: [
+        {
+          name: 'name1',
+          surn: 'surn1',
+        },
+        {
+          name: 'name2',
+          surn: 'surn2',
+        },
+        {
+          name: 'name3',
+          surn: 'surn3',
+        },
+      ]
     }
   },
   methods: {
