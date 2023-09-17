@@ -177,6 +177,14 @@ import TheWelcome from './components/TheWelcome.vue'
       <button @click="removeItem(index)">remove</button>
     </li>
   </ul>
+
+  <ul>
+    <li v-for="user in users3" :key="user.id">
+      {{ user.name }}
+      {{ user.surn }}
+      <button @click="removeItem2(user.id)">remove</button>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -252,6 +260,23 @@ export default {
       isDisabled: true,
       newItem: '',
       items: ['a', 'b', 'c', 'd', 'e'],
+      users3: [
+        {
+          id: 1,
+          name: 'name1',
+          surn: 'surn1',
+        },
+        {
+          id: 2,
+          name: 'name2',
+          surn: 'surn2',
+        },
+        {
+          id: 3,
+          name: 'name3',
+          surn: 'surn3',
+        },
+      ]
     }
   },
   methods: {
@@ -294,6 +319,11 @@ export default {
     },
     removeItem: function(index) {
       this.items.splice(index, 1);
+    },
+    removeItem2: function(id) {
+      this.users3 = this.users3.filter((user) => {
+        return user.id !== id;
+      })
     }
   },
   computed: {
